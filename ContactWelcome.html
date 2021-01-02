@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css" media="screen">
+
+        @media screen and (max-width:600px) {
+            .mainTable {
+                max-width: 375px !important;
+                padding-left: 5px !important;
+                padding-right: 5px !important;
+            }
+            .section3{
+                padding-left: 5px !important;
+                padding-right: 5px !important;
+            }
+            .s2text {
+                padding: 0 30px !important;
+            }
+            .s2mainContentWrap {
+                padding-top: 26px !important;
+            }
+            .s3row1,
+            .s3row2,
+            .s3row3{
+                padding-left: 0 !important;
+                padding-bottom: 5px !important;
+                text-align: center !important;
+            }
+            .s3row1title,
+            .s3row2title,
+            .s3row3title {
+                text-align: center !important;
+            }
+            .s3row1text,
+            .s3row2text,
+            .s3row3text {
+                text-align: center !important;
+            }
+            .s3row1imgWrap,
+            .s3row2imgWrap,
+            .s3row3imgWrap{
+                display: none !important;
+            }
+            .s3row1mobile,
+            .s3row2mobile,
+            .s3row3mobile{
+                display: table-row !important;
+            }
+            .s3row1title,
+            .s3row2title,
+            .s3row3title{
+                width: 100% !important;
+            }
+            .s3row1text,
+            .s3row2text,
+            .s3row3text{
+                width: 100% !important;
+            }
+            .brNone{
+                display: none !important;
+            }
+            .s3row1title,
+            .s3row2title,
+            .s3row3title {
+                padding-top: 25px !important;
+                padding-bottom: 10px !important;
+            }
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: #fdfdfd;
+        }
+        .mainTable{
+            max-width: 600px;
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+        }
+        .section1{
+            max-width: 450px;
+            width: 100%;
+            height: 100px;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        .s1logoWrap{
+
+        }
+        #s1logoPart1{
+            vertical-align: middle;
+            display: inline-block;
+            padding-right: 6px;
+        }
+        #s1logoPart2{
+            width: 100px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .section2,
+        .section3{
+            max-width: 450px;
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid #f0f3f7;
+            border-radius: 10px;
+        }
+        .section3{
+            margin-top: 11px;
+        }
+        .s2titleText{
+            font-family: HelveticanEUE, sans-serif;
+            font-size: 18px;
+            line-height: 22px;
+            color: #1ba1fc;
+            padding-top: 36px;
+            padding-bottom: 13px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .s2text{
+            font-family: HelveticanEUE, sans-serif;
+            font-size: 12px;
+            line-height: 17px;
+            color: #7b878c;
+        }
+        .s2mainContentWrap{
+            padding-top: 36px;
+            padding-bottom: 5px;
+        }
+        .s2mainContentWrap img{
+            max-width: 412px;
+            width: 100%;
+        }
+        .s3titleText{
+            font-family: HelveticanEUE, sans-serif;
+            font-size: 18px;
+            line-height: 22px;
+            color: #1ba1fc;
+            padding-top: 40px;
+            padding-bottom: 10px;
+        }
+        .s3row1title,
+        .s3row2title,
+        .s3row3title{
+            display: inline-block;
+            font-family: HelveticanEUE, sans-serif;
+            font-size: 16px;
+            line-height: 18px;
+            color: #2e4154;
+            padding-top: 55px;
+            padding-bottom: 15px;
+            text-align: left;
+            width: 191px;
+        }
+        .s3row1text,
+        .s3row2text,
+        .s3row3text{
+            display: inline-block;
+            font-family: HelveticanEUE, sans-serif;
+            font-size: 12px;
+            line-height: 17px;
+            color: #7b878c;
+            text-align: left;
+            width: 191px;
+        }
+        .s3row1,
+        .s3row2,
+        .s3row3{
+            padding-left: 10px;
+            padding-bottom: 50px;
+            text-align: left;
+            width: 200px;
+        }
+        .s3row1imgWrap img,
+        .s3row2imgWrap img,
+        .s3row3imgWrap img,
+        .s3row1mobile td img,
+        .s3row2mobile td img,
+        .s3row3mobile td img{
+            width: 235px;
+        }
+        .s3row1mobile,
+        .s3row2mobile,
+        .s3row3mobile{
+            display: none;
+        }
+        .s4helpCenterText{
+            padding-top: 12px;
+        }
+        .section4{
+            max-width: 450px;
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .s4socialWrap{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .s4socialButtons{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .s4buttonMargin{
+            display: inline-block;
+            width: 10px;
+        }
+        #linkedInButton{
+            background-color: #505b6e;
+            border-radius: 50px;
+        }
+        #linkedInImg{
+            padding: 5px;
+        }
+        .s4text{
+            font-family: Helvetica, sans-serif;
+            font-size: 9px;
+            line-height: 13px;
+            color: #505b6e;
+        }
+        .s4otherLinksWrap{
+            padding-top: 25px;
+            padding-bottom: 22px;
+        }
+        .s4otherLinks{
+            font-family: Helvetica, sans-serif;
+            font-size: 10px;
+            line-height: 16px;
+            color: #505b6e;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .s4helpCenterText{
+            font-family: Helvetica, sans-serif;
+            font-size: 11px;
+            line-height: 14px;
+            color: #505b6e;
+        }
+        .s4helpCenterText a{
+            color: #05a1fc;
+        }
+    </style>
+</head>
+<body>
+<table class="mainTable" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+    <tr>
+        <td>
+            <center>
+                <table class="section1" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="s1logoWrap">
+                            <a href="https://contact.ai" target="_blank">
+                                <img src="https://emaildatafiles.s3.us-east-2.amazonaws.com/contLogo.png" alt="contact logotype" style="width: 150px">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <table class="section2" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="s2titleText">
+                            Hi {{ insert FIRST_NAME 'default=Yaniv' }}, Welcome to Contact.Ai
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="s2text">
+                            You are a step closer to discover everything <br class="brNone">
+                            about the people you meet. Take a minute to watch our video!
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="s2mainContentWrap">
+                            <a href="#" target="_blank"><img src="https://emaildatafiles.s3.us-east-2.amazonaws.com/contactWelcome6.png" alt="video link"></a>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <table class="section3" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="s3titleText" colspan="2">
+                            Key features that will make you a Pro
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="s3row1">
+                            <span class="s3row1title">
+                                Caller ID for Professionals
+                            </span>
+                            <span class="s3row1text">
+                                Identify unknown phone calls and
+                                block annoying robocalls, spam
+                                calls, and telemarketers.
+                            </span>
+                        </td>
+                        <td class="s3row1imgWrap">
+                            <img src="https://emaildatafiles.s3.us-east-2.amazonaws.com/contactWelcome5.png" alt="calendar notates">
+                        </td>
+                    </tr>
+                    <tr class="s3row1mobile">
+                        <td>
+                            <img src="https://emaildatafiles.s3.us-east-2.amazonaws.com/contactWelcomMobile3.png" alt="calendar notates">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="s3row2">
+                                <span class="s3row2title">
+                                    People & Companies<br>
+                                    Insights
+                                </span>
+                            <span class="s3row2text">
+                                Get rich insights on every contact,
+                                and get to know your clients and
+                                improve your professional
+                                relationships.
+                            </span>
+                        </td>
+                        <td class="s3row2imgWrap">
+                            <img src="https://emaildatafiles.s3.us-east-2.amazonaws.com/contctWelcome3.png" alt="calendar notates">
+                        </td>
+                    </tr>
+                    <tr class="s3row2mobile">
+                        <td>
+                            <img src="https://emaildatafiles.s3.us-east-2.amazonaws.com/contactWelcomMobile4.png" alt="calendar notates">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="s3row3">
+                                <span class="s3row3title">
+                                    Tasks, Reminders & Follow-ups
+                                </span>
+                            <span class="s3row3text">
+                                Create tasks, reminders & follow-ups
+                                directly from phone calls, to never
+                                lose an opportunity from a lead or
+                                customer.
+                            </span>
+                        </td>
+                        <td class="s3row3imgWrap">
+                            <img src="https://emaildatafiles.s3.us-east-2.amazonaws.com/contactWelcome4.png" alt="calendar notates">
+                        </td>
+                    </tr>
+                    <tr class="s3row3mobile">
+                        <td>
+                            <img src="https://emaildatafiles.s3.us-east-2.amazonaws.com/contactWelcome4.png" alt="calendar notates">
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <table class="section4">
+                    <tr>
+                        <td class="s4helpCenterText">
+                            If you want to learn more or have any questions, feel free to contact our support<br class="brNone">
+                            or view our help center <a href="#" target="_blank">here</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="s4socialWrap">
+                            <a href="#" class="s4socialButtons" target="_blank"><img id="twitterImg" src="https://emaildatafiles.s3.us-east-2.amazonaws.com/twitter.png" alt="twitter button" ></a>
+                            <span class="s4buttonMargin"></span>
+                            <a href="#" class="s4socialButtons" target="_blank"><img id="facebookImg" src="https://emaildatafiles.s3.us-east-2.amazonaws.com/facebook.png" alt="facebook button"></a>
+                            <span class="s4buttonMargin"></span>
+                            <a href="#" class="s4socialButtons" id="linkedInButton" target="_blank"><img id="linkedInImg" src="https://emaildatafiles.s3.us-east-2.amazonaws.com/linkedin-logo.png" alt="linkedIn button"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="s4text">
+                            Copyright @ 2020 Sync.Ai, All rights reserved.<br>
+                            Francis Drake’s Highway, P.O. Box 3463, Road Town, Tortola, BVI
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="s4otherLinksWrap">
+                            <a class="s4otherLinks" href="#" target="_blank">Unsubscribe</a>
+                            <span>|</span>
+                            <a class="s4otherLinks" href="#" target="_blank">Email Preferences</a>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
